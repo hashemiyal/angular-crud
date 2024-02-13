@@ -1,0 +1,29 @@
+<div class="row">
+    <div class="col l2"></div>
+    <div class="col l8">
+        <h2 class="header center">LOGIN</h2>
+        <div class="card horizontal">
+          <div class="card-image">
+            
+          </div>
+          <div class="card-stacked">
+            <div class="card-content">
+                <div class="input-field col s12">
+                    <input id="email" type="email" class="" [(ngModel)]="email">
+                    <label for="email">Email</label>
+                  </div>
+                  <div class="input-field col s12">
+                    <input id="password" type="password" class="" #password>
+                    <label for="password">Password</label>
+                  </div>
+            </div> 
+    
+            <div class="card center">
+                <a class=" red lighten-2  waves-effect waves-light btn-small" (click)="loginuser()"><i class="material-icons left">login</i>Login</a>
+                <a class=" red lighten-2 waves-effect waves-light btn-small" routerLink="/register"><i class="material-icons right"></i>Register</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class=" col l2"></div>
+</div>

@@ -1,0 +1,42 @@
+<div class="row">
+  <div class="col l1"></div>
+  <div class="col l10">
+    <div class="card horizontal z-depth-4" appHightlight [Expiredarticle]="article.expired">
+      <div class="card-image">
+        <img src="assets/images/download.png">
+      </div>
+      <div class="card-stacked">
+        <div class="card-content">
+          <h2 class="header" routerLink="/articles/{{article.id}}">{{article.title | uppercase}}</h2>
+          <span class="new badge red" data-badge-caption="expired" *ngIf="article.expired"></span>
+          <p>{{article.desc}}.</p>
+          <span class="new badge red" data-badge-caption="">{{article.created_at | date}}</span>
+        </div>
+        <div class="card-action">
+          <i class="material-icons red-text text-lighten-1" [ngClass]="{'hide' : article.likes == 0}">favorite</i>
+          <p [ngStyle]="{fontWeight: article.likes > 0 ? 'bold' : 'normal'}">{{article.likes}} people liked</p>
+          <span class="badge red lighten-4">{{article.category | format}}</span>
+          <table>
+            <tbody>
+              <tr *ngFor="let c of article.com">
+                <td>{{c}}</td>
+              </tr>
+              <div class="input-field">
+                <input type="text" name="com">
+                <label for="com">Comment</label>
+              </div>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="row">
+        <a class="btn-small red lighten-2 waves-effect waves-light col l4" *ngIf="article.likes !== 1; else btnliked"
+          (click)="like(article.id, article.likes)">LIKE</a>
+        <ng-template #btnliked>
+          <a class="btn-small red lighten-2 waves-effect waves-light col l4">LIKED</a>
+        </ng-template>
+        <a class="btn-small red lighten-2 waves-effect waves-light col l4">SHARE</a>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,46 @@
+<div class="row">
+    <div class="col l2"></div>
+    <form #createform="ngForm" (ngSubmit)="send(createform)">
+    <div class="col l8">
+        <h2 class="header center">INSERT AN ARTICLE</h2>
+        <div class="card horizontal">
+         
+          <div class="card-stacked">
+            <div class="card-content">
+                
+                <div class="input-field col l12">
+                    <input id="email" type="text" class="" name="title" ngModel>
+                    <label for="email">Title</label>
+                  </div>
+                  <div class="input-field col l12">
+                    <textarea id="textarea1" class="materialize-textarea" name="desc" ngModel></textarea>
+                    <label for="email">Desciption</label>
+                  </div>
+                 
+                  <div class="input-field col l12">
+                    <input id="date" type="date" class=""name="created_at" ngModel>
+                    <label for="date">Post Date</label>
+                  </div>
+                  <div class="input-field col l12">
+                    <select name="category" ngModel>
+                      <option value=""  disabled selected>Choose your category</option>
+                      <option value="news">News</option>
+                      <option value="social">Social</option>
+                      <option value="political">Political</option>
+                    </select>
+                    <label for="category">Category</label>
+                  </div>
+            </div> 
+    
+            <div class="center card-action">
+                <button class="btn waves-effect waves-light" type="submit" name="action">INSERT
+                    
+                  </button>
+                
+            </div>
+          </div>
+        </div>
+      </div>
+      </form>
+      <div class=" col l2"></div>
+</div>

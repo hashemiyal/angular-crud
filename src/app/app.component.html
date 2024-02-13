@@ -1,0 +1,28 @@
+<app-header></app-header>
+<!-- <app-filter (selectedrbchanged)="selectedrb=($event)" (txtchanged)="txt=($event)" ></app-filter>  -->
+<app-filter></app-filter>
+<div class="row center">
+    <div class=" col l4"></div>
+    <div class=" col l4">
+        <div class="preloader-wrapper active" *ngIf="showloader">
+            <div class="spinner-layer spinner-red-only">
+              <div class="circle-clipper left">
+                <div class="circle"></div>
+              </div><div class="gap-patch">
+                <div class="circle"></div>
+              </div><div class="circle-clipper right">
+                <div class="circle"></div>
+              </div>
+            </div>
+          </div>
+    </div>
+    <div class=" col l4"></div>
+</div>
+<router-outlet></router-outlet>
+
+
+<!-- <app-articles [selectedrb]='selectedrb' [txt]="txt"></app-articles> -->
+<div id="footer">
+    <app-footer>© 2024 Copyright   ||   Hahemi Yal</app-footer>
+</div>
+

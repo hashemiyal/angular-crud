@@ -1,0 +1,44 @@
+<div class="row">
+    <div class="col l2"></div>
+    <form #updateform="ngForm">
+    <div class="col l8">
+        <h2 class="header center">EDIT THIS ARTICLE</h2>
+        <div class="card horizontal">
+         
+          <div class="card-stacked">
+            <div class="card-content">
+                
+                <div class="input-field col l12">
+                    <input id="email" type="text" class="" name="title" [(ngModel)]="selectedarticle.title">
+                    <label for="email">Title</label>
+                  </div>
+                  <div class="input-field col l12">
+                    <textarea id="textarea1" class="materialize-textarea" name="desc" [(ngModel)]="selectedarticle.desc"></textarea>
+                    <label for="email">Desciption</label>
+                  </div>
+                 
+                  <div class="input-field col l12">
+                    <input id="date" type="date" class=""name="created_at" [(ngModel)]="selectedarticle.created_at">
+                    <label for="date">Post Date</label>
+                  </div>
+                  <div class="input-field col l12">
+                    <select name="category" ngModel>
+                      <option value=""  disabled selected>Choose your category</option>
+                      <option value="news">News</option>
+                      <option value="social">Social</option>
+                      <option value="political">Political</option>
+                    </select>
+                    <label for="category">Category</label>
+                  </div>
+            </div> 
+    
+            <div class="center card-action">
+                <button class="btn waves-effect waves-light red lighten-2" type="submit" name="action" (click)="update(selectedarticle.id)">UPDATE</button>
+                <button class="btn waves-effect waves-light red lighten-2" type="submit" routerLink="/articles/{{selectedarticle.id}}" name="action">BACK</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      </form>
+      <div class=" col l2"></div>
+</div>

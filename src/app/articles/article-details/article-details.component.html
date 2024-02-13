@@ -1,0 +1,31 @@
+<div class="row">
+    <div class="col l1"></div>
+    <div class="col l10">
+      <div class="card horizontal z-depth-4">
+        <div class="card-image">
+          <img src="assets/images/download.png">
+        </div>
+        <div class="card-stacked" >
+          <div class="card-content">
+            <h2 class="header ">{{selectedarticle.title | uppercase}}</h2>
+            <p>{{selectedarticle.desc}}</p>
+            <span class="new badge red" data-badge-caption="expired" *ngIf="selectedarticle.expired"></span>
+          </div>
+          <div class="card-action center">
+            <button class="btn-small waves-effect red lighten-2" type="submit" name="action" routerLink="/articles">BACK</button>
+            <button class="btn-small waves-effect red lighten-2" type="submit" name="action" routerLink="/articles/delete/{{selectedarticle.id}}">
+            DELETE</button>
+            <button class="btn-small waves-effect red lighten-2" type="submit" name="action" routerLink="/articles/edit/{{selectedarticle.id}}">
+              EDIT</button>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    <div class="col l1"></div>
+</div>
+    
+    
+  
+   
+

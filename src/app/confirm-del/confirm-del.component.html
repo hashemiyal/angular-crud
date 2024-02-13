@@ -1,0 +1,10 @@
+<div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4>ARE YOU SURE WANT TO DELETE THIS ARTICLE WITH TITLE : <strong>{{selectedarticle.title | uppercase}}</strong>?</h4>
+    </div>
+    <div class="modal-footer">
+      <a  class="modal-close waves-effect waves-red btn-small red" (click)="delete()">DELETE</a>
+      <a  class="modal-close waves-effect waves-red btn-small blue" routerLink="/articles/{{selectedarticle.id}}">CANCEL</a>
+    </div>
+  </div>
+         

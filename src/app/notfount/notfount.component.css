@@ -1,0 +1,22 @@
+h1 {
+    color: #dc3545;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+}

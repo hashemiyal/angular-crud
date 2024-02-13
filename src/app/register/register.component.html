@@ -1,0 +1,39 @@
+
+<div class="row">
+    <div class="col l2"></div>
+    <form class="col l8">
+      <div class="row">
+        <div class="input-field col s6">
+          <input placeholder="" id="first_name" type="text" class="validate" [(ngModel)]="firstname" name="first_name">
+          <label for="first_name">First Name</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="last_name" type="text" class="validate"  [(ngModel)]="lastname" name="last">
+          <label for="last_name">Last Name</label>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="password" type="password" class="validate"  [(ngModel)]="password" name="password">
+          <label for="password">Password</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="email" type="email" class="validate"  [(ngModel)]="email" name="email">
+          <label for="email">Email</label>
+          
+ 
+        </div>
+      </div>
+      <div class="row">
+        <div class="col l6"><a class=" red lighten-2  waves-effect waves-light btn-small col l12" (click)="register()">Register</a></div>
+        <div class="col l6"><a class=" red lighten-2  waves-effect waves-light btn-small col l12" routerLink="/login">Login</a></div>
+        
+        
+      </div>
+    </form>
+    <div class="col l2"></div>
+  </div>
+        
